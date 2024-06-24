@@ -1,0 +1,47 @@
+{
+  "name": "@se-studio/se-tailwind-plugin",
+  "sideEffects": false,
+  "version": "3.22.0",
+  "description": "Tailwind configuration for Bond/Something Else",
+  "author": "Nick Randell <nick@se.studio>",
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "keywords": [
+    "something else",
+    "tailwind"
+  ],
+  "repository": "https://github.com/Something-Else-Studio/se-tailwind-plugin",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:tsc": "tsc --outDir dist/",
+    "build": "npm-run-all -s clean build:*",
+    "watch": "npm-run-all -s watch:*",
+    "watch:tsc": "npm run build:tsc -w",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "clean": "del-cli dist/*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.8",
+    "change-case": "^5.4.0",
+    "cross-env": "^7.0.3",
+    "del-cli": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "change-case": "^5.4.0",
+    "prettier-plugin-tailwindcss": "^0",
+    "tailwindcss": "^3.1.8"
+  },
+  "gitHead": "f5bb8b653fb7b6a1f9698f78bfaf0f5336c0bf06"
+}
