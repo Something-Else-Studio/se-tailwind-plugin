@@ -249,6 +249,7 @@ function writeColorsIfRequired(contents: string, colorFile: string): void {
   try {
     const oldContents = readFileSync(colorFile);
     oldHash = calculateMd5(oldContents);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     // ignore this
   }

@@ -5,7 +5,7 @@
   "description": "Tailwind configuration for Bond/Something Else",
   "author": "Nick Randell <nick@se.studio>",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "license": "MIT",
   "keywords": [
@@ -28,13 +28,20 @@
     "watch": "npm-run-all -s watch:*",
     "watch:tsc": "npm run build:tsc -w",
     "prepare": "cross-env NODE_ENV=production npm run build",
-    "clean": "del-cli dist/*"
+    "clean": "del-cli dist/*",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src"
   },
   "devDependencies": {
     "@types/node": "^20.14.8",
+    "@typescript-eslint/eslint-plugin": "^8.12.2",
+    "@typescript-eslint/parser": "^8.12.2",
     "change-case": "^5.4.0",
     "cross-env": "^7.0.3",
-    "del-cli": "^5.0.0",
+    "del-cli": "^6.0.0",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.0.4"
   },
